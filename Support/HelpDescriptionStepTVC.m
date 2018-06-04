@@ -20,6 +20,7 @@
     
     // init description text field
     self.descriptionTextView.delegate = self;
+    self.descriptionTextView.delegate = self;
     //    kPlaceholderDescription = NSLocalizedString(@"jobWizardDescriptionPlaceholder", nil);
     NSString *description = [self.context objectForKey:@"description"];
     if (description) {
