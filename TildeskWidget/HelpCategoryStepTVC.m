@@ -7,7 +7,6 @@
 //
 
 #import "HelpCategoryStepTVC.h"
-#import "HelpCategory.h"
 #import "HelpDataService.h"
 #import "HelpDepartment.h"
 
@@ -20,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"test key: %@", self.context[@"test key"]);
     
 //    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Help-Info" ofType:@"plist"]];
 //    NSArray *plist_categories = [dictionary objectForKey:@"help-categories"];
@@ -51,16 +51,17 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    HelpDataService *service =[[HelpDataService alloc] init];
-    [service downloadDepartmentsWithCompletionHandler:^(NSArray<HelpDepartment *> *departments, NSError *error) {
-        // TODO
-        NSLog(@"count deps: %@", departments);
-        self.departments = departments;
-        for (HelpDepartment *dep in departments) {
-            NSLog(@"dep id: %@, name: %@ isDefault: %d", dep.departmentId, dep.name, dep.isDefault);
-        }
-        [self.tableView reloadData];
-    }];
+    [super viewDidAppear:animated];
+//    HelpDataService *service =[[HelpDataService alloc] init];
+//    [service downloadDepartmentsWithCompletionHandler:^(NSArray<HelpDepartment *> *departments, NSError *error) {
+//        // TODO
+//        NSLog(@"count deps: %@", departments);
+//        self.departments = departments;
+//        for (HelpDepartment *dep in departments) {
+//            NSLog(@"dep id: %@, name: %@ isDefault: %d", dep.departmentId, dep.name, dep.isDefault);
+//        }
+//        [self.tableView reloadData];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -128,25 +129,9 @@ static NSInteger NEXT_STEP_CELL_HEIGHT = 60;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //    if (indexPath.section == 1) {
-    //        [self.context setObject:[self.categories objectAtIndex:indexPath.row] forKey:@"category"];
-    //        [self performSegueWithIdentifier:@"next" sender:self];
-    //    }
-    
-//    HelpCategory *selectedCategory = [self.categories objectAtIndex:indexPath.row];
-    HelpDepartment *selectedCategory = [self.departments objectAtIndex:indexPath.row];
-//    if (selectedCategory.children) {
-//        // call yourself, no prepareForSegue is called, all init here.
-//        HelpCategoryStepTVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"request-vc"];
-//        vc.category = selectedCategory;
-//        vc.context = self.context;
-//        [self.navigationController pushViewController:vc animated:YES];
-//    } else {
-        [self.context setObject:selectedCategory forKey:@"category"];
-        [self performSegueWithIdentifier:@"next" sender:self];
-//    }
-    
-    //    NSLog(@"context %@", self.context);
+    HelpDepartment *selectedDepartment = [self.departments objectAtIndex:indexPath.row];
+    [self.context setObject:selectedDepartment forKey:@"department"];
+    [self performSegueWithIdentifier:@"next" sender:self];
 }
 
 #pragma mark - Navigation
