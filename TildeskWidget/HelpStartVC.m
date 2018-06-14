@@ -11,6 +11,8 @@
 #import "HelpDepartment.h"
 #import "HelpCategoryStepTVC.h"
 #import "HelpDescriptionStepTVC.h"
+#import "HelpLocal.h"
+#import "HelpAction.h"
 
 @interface HelpStartVC ()
 
@@ -21,8 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.context = [[NSMutableDictionary alloc] init];
-    [self.context setObject:@"test value" forKey:@"test key"];
+//    self.context = [[NSMutableDictionary alloc] init];
+    
+    self.cancelButton.title = [HelpLocal translate:@"cancel"];
+//    [self.context setObject:@"test value" forKey:@"test key"];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -37,7 +41,7 @@
         }
         if (departments.count == 1) {
             // set context.department = default
-            [self.context setObject:departments[0] forKey:@"department"];
+            self.helpAction.department = departments[0];
             // perform message-segue
             [self performSegueWithIdentifier:@"message-segue" sender:self];
         }
@@ -66,13 +70,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"departments-segue"]) {
         NSObject *vc = [segue destinationViewController];
-        [vc setValue:self.context forKey:@"context"];
+        [vc setValue:self.helpAction forKey:@"helpAction"];
         [vc setValue:self.departments forKey:@"departments"];
     }
     else if ([segue.identifier isEqualToString:@"message-segue"]) {
         NSObject *vc = [segue destinationViewController];
-        [vc setValue:self.context forKey:@"context"];
+        [vc setValue:self.helpAction forKey:@"helpAction"];
     }
+}
+
+- (IBAction)cancelAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

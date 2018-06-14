@@ -8,6 +8,9 @@
 
 #import "HelpDescriptionStepTVC.h"
 #import "HelpCategoryStepTVC.h"
+#import "HelpDepartment.h"
+#import "HelpLocal.h"
+#import "HelpAction.h"
 
 @interface HelpDescriptionStepTVC ()
 
@@ -21,20 +24,19 @@
     // init description text field
     self.descriptionTextView.delegate = self;
     //    kPlaceholderDescription = NSLocalizedString(@"jobWizardDescriptionPlaceholder", nil);
-    NSString *description = [self.context objectForKey:@"description"];
-    if (description) {
-        self.descriptionTextView.text = description;
+    NSString *message = self.helpAction.message;
+    if (message) {
+        self.descriptionTextView.text = message;
     }
     [self validateDescription];
     
-    self.nextButton.title = NSLocalizedString(@"Help wizard send button", nil);
-    self.titleLabel.text = NSLocalizedString(@"help wizard title", nil);
-    self.subtitleLabel.text = NSLocalizedString(@"help wizard description", nil);//@"Descrivi sinteticamente il tuo problema, ti metteremo in contatto con un operatore specializzato";//NSLocalizedString(@"description subtitle", nil);
-    self.navigationItem.title = NSLocalizedString(@"help wizard navigation title", nil);
+    self.nextButton.title = [HelpLocal translate:@"Help wizard send button"];
+    self.titleLabel.text = [HelpLocal translate:@"help wizard title"];
+    self.subtitleLabel.text = [HelpLocal translate:@"help wizard description"];//@"Descrivi sinteticamente il tuo problema, ti metteremo in contatto con un operatore specializzato";//NSLocalizedString(@"description subtitle", nil);
+    self.navigationItem.title = [HelpLocal translate:@"help wizard navigation title"];
     
     // test
-    NSLog(@"context: %@", self.context);
-    //    [self resetDescription];
+//    NSLog(@"helpAction: %@", self.helpAction);
 }
 
 //- (void)resetDescription
@@ -111,21 +113,20 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"next"]) {
-        NSObject *vc = (NSObject *)[segue destinationViewController];
-        NSString *description = self.descriptionTextView.text;
-        [self saveDescription:description];
-        [self.context setObject:description forKey:@"description"];
-        [vc setValue:self.context forKey:@"context"];
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"next"]) {
+//        NSObject *vc = (NSObject *)[segue destinationViewController];
+//        NSString *description = self.descriptionTextView.text;
+//        [self saveDescription:description];
+//        [self.context setObject:description forKey:@"description"];
+//        [vc setValue:self.context forKey:@"context"];
+//    }
+//}
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     NSString *description = self.descriptionTextView.text;
     [self saveDescription:description];
-    [self.context setObject:description forKey:@"description"];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -232,7 +233,7 @@ static NSInteger MIN_CHARACTERS_DESCRIPTION = 4;
                                       }];
     
     UIAlertAction* cancel = [UIAlertAction
-                             actionWithTitle:NSLocalizedString(@"Help wizard not now button", nil)
+                             actionWithTitle:[HelpLocal translate:@"Help wizard not now button"]
                              style:UIAlertActionStyleCancel
                              handler:^(UIAlertAction * action)
                              {
@@ -247,15 +248,32 @@ static NSInteger MIN_CHARACTERS_DESCRIPTION = 4;
 }
 
 -(void)send {
-    NSLog(@"sending: %@", self.context);
-    self.descriptionTextView.delegate = nil;
-    [self.context setObject:self forKey:@"source-view-controller"];
-    id vc = [self.context objectForKey:@"view-controller"];
-    NSLog(@"vc: %@", vc);
-    if ([vc respondsToSelector:@selector(helpWizardEnd:)]) {
-        NSLog(@"performing selector...");
-        [vc performSelector:@selector(helpWizardEnd:) withObject:self.context];
-    }
+//    NSLog(@"sending: %@", self.context);
+    
+    [self.helpAction dismissWizardAndOpenMessageViewWithSupport];
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"Wizard dismissed");
+//        // finestra conversazione si apre come pop-up dopo chiusura help-wizard
+//        // inviare metadati impostati in fase di apertura chat (inserire in context? studio)
+//        // TODO: get attributes from context
+//        // TODO: remove System's messages
+//
+//            ChatUser *recipient = [[ChatUser alloc] init:support_group_id fullname:@"Support"];
+//            [[ChatUIManager getInstance] openConversationMessagesViewAsModalWith:(ChatUser *)recipient  viewController:self attributes:nil withCompletionBlock:^{
+//                NSLog(@"Messages view dismissed.");
+//            }];
+//    }];
+    
+    
+    
+//    self.descriptionTextView.delegate = nil;
+//    [self.context setObject:self forKey:@"source-view-controller"];
+//    id vc = [self.context objectForKey:@"view-controller"];
+//    NSLog(@"vc: %@", vc);
+//    if ([vc respondsToSelector:@selector(helpWizardEnd:)]) {
+//        NSLog(@"performing selector...");
+//        [vc performSelector:@selector(helpWizardEnd:) withObject:self.context];
+//    }
 }
 
 -(void)dealloc {

@@ -17,6 +17,7 @@
 #import <sys/utsname.h>
 #import "HelpDescriptionStepTVC.h"
 #import "ChatUIManager.h"
+#import "HelpAction.h"
 
 static HelpFacade *sharedInstance = nil;
 
@@ -50,12 +51,25 @@ static HelpFacade *sharedInstance = nil;
 }
 
 -(void)openSupportView:(UIViewController *)sourcevc {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Help_request" bundle:nil];
-    UINavigationController *nc = [storyboard instantiateViewControllerWithIdentifier:@"help-wizard"];
+    HelpAction *action = [[HelpAction alloc] init];
+    [action openSupportView:sourcevc];
+}
+
+//-(void)openSupportView:(UIViewController *)sourcevc {
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Help_request" bundle:nil];
+//    UINavigationController *nc = [storyboard instantiateViewControllerWithIdentifier:@"help-wizard"];
 //    HelpStartVC *firstStep = (HelpStartVC *)[[nc viewControllers] objectAtIndex:0];
-//    firstStep.context = [[NSMutableDictionary alloc] init];
-//    [firstStep.context setObject:sourcevc forKey:@"view-controller"];
-    [sourcevc presentViewController:nc animated:YES completion:nil];
+////    firstStep.context = [[NSMutableDictionary alloc] init];
+////    [firstStep.context setObject:sourcevc forKey:@"view-controller"];
+//    [sourcevc presentViewController:nc animated:YES completion:^{
+//        // NSLog(@"Presented");
+//    }];
+//}
+
+-(void)dismissWizard:(UIViewController *)sourcevc {
+    [sourcevc dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"Wizard dismissed...");
+    }];
 }
 
 -(void)handleWizardSupportFromViewController:(UIViewController *)vc helpContext:(NSDictionary *)context {
