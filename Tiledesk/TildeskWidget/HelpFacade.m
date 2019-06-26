@@ -7,12 +7,11 @@
 //
 
 #import "HelpFacade.h"
-#import "HelloAppDelegate.h"
-#import "HelloApplicationContext.h"
+//#import "HelloAppDelegate.h"
+//#import "HelloApplicationContext.h"
 #import "HelpCategoryStepTVC.h"
 #import "ChatUser.h"
 #import "ChatUtil.h"
-//#import "HelpCategory.h"
 #import "HelpStartVC.h"
 #import <sys/utsname.h>
 #import "HelpDescriptionStepTVC.h"
@@ -33,10 +32,10 @@ static HelpFacade *sharedInstance = nil;
 +(HelpFacade *)sharedInstance {
     if (!sharedInstance) {
         sharedInstance = [[super alloc] init];
-        HelloAppDelegate *appDelegate = (HelloAppDelegate *)[[UIApplication sharedApplication] delegate];
-        HelloApplicationContext *applicationContext = appDelegate.applicationContext;
-        BOOL support_enabled = [[applicationContext.settings valueForKey:@"chat-support"] boolValue];
-        sharedInstance.supportEnabled = support_enabled;
+//        HelloAppDelegate *appDelegate = (HelloAppDelegate *)[[UIApplication sharedApplication] delegate];
+//        HelloApplicationContext *applicationContext = appDelegate.applicationContext;
+//        BOOL support_enabled = [[applicationContext.settings valueForKey:@"chat-support"] boolValue];
+//        sharedInstance.supportEnabled = support_enabled;
     }
     return sharedInstance;
 }
@@ -87,7 +86,7 @@ static HelpFacade *sharedInstance = nil;
 
 -(void)chatAction:(NSDictionary *)context fromSection:(NSString *)section {
     NSLog(@"Passing control to support agent");
-    HelpCategory *cat = [context objectForKey:@"department"];
+//    HelpCategory *cat = [context objectForKey:@"department"];
     // Agent user
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Help-Info" ofType:@"plist"]];
     NSString *client = [[[NSBundle mainBundle] infoDictionary] objectForKey:(id)kCFBundleNameKey]; //[dictionary objectForKey:@"client-name"];
