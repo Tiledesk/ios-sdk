@@ -105,6 +105,7 @@
 		B275AB2722C294B800E2D388 = {
 			isa = PBXGroup;
 			children = (
+				B2FFB11322C353BB001BB0A8 /* Resources */,
 				B275AB3322C294B800E2D388 /* Tiledesk */,
 				B275AB3E22C294B800E2D388 /* TiledeskTests */,
 				B275AB3222C294B800E2D388 /* Products */,
@@ -145,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				B2FFB0EC22C299A5001BB0A8 /* HelpDescriptionStepTVC.m */,
-				B2FFB0ED22C299A5001BB0A8 /* Help.strings */,
 				B2FFB0EF22C299A5001BB0A8 /* HelpAction.h */,
 				B2FFB0F022C299A5001BB0A8 /* HelpDepartment.m */,
 				B2FFB0F222C299A5001BB0A8 /* HelpStartVC.h */,
@@ -161,9 +161,17 @@
 				B2FFB0FD22C299A5001BB0A8 /* HelpStartVC.m */,
 				B2FFB0FE22C299A5001BB0A8 /* HelpFacade.m */,
 				B2FFB0FF22C299A5001BB0A8 /* HelpCategoryStepTVC.m */,
-				B2FFB10022C299A5001BB0A8 /* Help_request.storyboard */,
 			);
 			path = TildeskWidget;
+			sourceTree = "<group>";
+		};
+		B2FFB11322C353BB001BB0A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B2FFB10022C299A5001BB0A8 /* Help_request.storyboard */,
+				B2FFB0ED22C299A5001BB0A8 /* Help.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B47497B6E384540B6961B934 /* Frameworks */ = {
