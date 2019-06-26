@@ -1,0 +1,6 @@
+framework module Chat21 {
+  umbrella header "Chat21-umbrella.h"
+
+  export *
+  module * { export * }
+}
