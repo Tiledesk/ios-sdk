@@ -9,6 +9,7 @@
 #import "TiledeskAction.h"
 #import "TiledeskStartVC.h"
 #import "ChatUser.h"
+#import "ChatAuth.h"
 #import "ChatManager.h"
 #import "ChatUIManager.h"
 #import "TiledeskDepartment.h"
@@ -16,7 +17,7 @@
 
 @implementation TiledeskAction
 
--(void)connect {
+-(void)connectWithCompletion:(void (^)(ChatUser *user, NSError *error))callback {
     [FIRApp configure];
     [ChatManager configure];
     
@@ -25,15 +26,14 @@
     [ChatAuth authWithEmail:email password:password completion:^(ChatUser *user, NSError *error) {
         if (error) {
             NSLog(@"Authentication error. %@", error);
+            callback(nil, error);
         }
         else {
             ChatManager *chatm = [ChatManager getInstance];
             user.firstname = @"YOUR FIRST NAME";
             user.lastname = @"YOUR LAST NAME";
             [chatm startWithUser:user];
-            UINavigationController *conversationsVC = [[ChatUIManager getInstance] getConversationsViewController];
-            self.window.rootViewController = conversationsVC;
-            [[ChatManager getInstance] createContactFor:user withCompletionBlock:nil];
+            callback(user, nil);
         }
     }];
 }
