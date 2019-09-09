@@ -87,7 +87,6 @@
 #import "ChatTextMessageRightCell.h"
 #import "ChatTitleVC.h"
 #import "ChatUserCellConfigurator.h"
-#import "NotificationAlertVC.h"
 #import "NotificationAlertView.h"
 #import "UIView+Property.h"
 

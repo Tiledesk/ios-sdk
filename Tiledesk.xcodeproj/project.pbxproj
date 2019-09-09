@@ -11,24 +11,25 @@
 		B275AB3B22C294B800E2D388 /* Tiledesk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B275AB3122C294B800E2D388 /* Tiledesk.framework */; };
 		B275AB4022C294B800E2D388 /* TiledeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275AB3F22C294B800E2D388 /* TiledeskTests.swift */; };
 		B275AB4222C294B800E2D388 /* Tiledesk.h in Headers */ = {isa = PBXBuildFile; fileRef = B275AB3422C294B800E2D388 /* Tiledesk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2FFB10122C299A5001BB0A8 /* HelpDescriptionStepTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0EC22C299A5001BB0A8 /* HelpDescriptionStepTVC.m */; };
-		B2FFB10222C299A5001BB0A8 /* Help.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2FFB0ED22C299A5001BB0A8 /* Help.strings */; };
-		B2FFB10322C299A5001BB0A8 /* HelpAction.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0EF22C299A5001BB0A8 /* HelpAction.h */; };
-		B2FFB10422C299A5001BB0A8 /* HelpDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F022C299A5001BB0A8 /* HelpDepartment.m */; };
-		B2FFB10522C299A5001BB0A8 /* HelpStartVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F222C299A5001BB0A8 /* HelpStartVC.h */; };
-		B2FFB10622C299A5001BB0A8 /* HelpLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F322C299A5001BB0A8 /* HelpLocal.m */; };
-		B2FFB10722C299A5001BB0A8 /* HelpDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F422C299A5001BB0A8 /* HelpDataService.h */; };
-		B2FFB10822C299A5001BB0A8 /* HelpCategoryStepTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F522C299A5001BB0A8 /* HelpCategoryStepTVC.h */; };
-		B2FFB10922C299A5001BB0A8 /* HelpFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F722C299A5001BB0A8 /* HelpFacade.h */; };
-		B2FFB10A22C299A5001BB0A8 /* HelpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F822C299A5001BB0A8 /* HelpAction.m */; };
-		B2FFB10B22C299A5001BB0A8 /* HelpDescriptionStepTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F922C299A5001BB0A8 /* HelpDescriptionStepTVC.h */; };
-		B2FFB10C22C299A5001BB0A8 /* HelpDepartment.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0FA22C299A5001BB0A8 /* HelpDepartment.h */; };
-		B2FFB10D22C299A5001BB0A8 /* HelpLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0FB22C299A5001BB0A8 /* HelpLocal.h */; };
-		B2FFB10E22C299A5001BB0A8 /* HelpDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FC22C299A5001BB0A8 /* HelpDataService.m */; };
-		B2FFB10F22C299A5001BB0A8 /* HelpStartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FD22C299A5001BB0A8 /* HelpStartVC.m */; };
-		B2FFB11022C299A5001BB0A8 /* HelpFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FE22C299A5001BB0A8 /* HelpFacade.m */; };
-		B2FFB11122C299A5001BB0A8 /* HelpCategoryStepTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FF22C299A5001BB0A8 /* HelpCategoryStepTVC.m */; };
+		B2FFB10122C299A5001BB0A8 /* TiledeskDescriptionStepTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0EC22C299A5001BB0A8 /* TiledeskDescriptionStepTVC.m */; };
+		B2FFB10222C299A5001BB0A8 /* Tiledesk.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2FFB0ED22C299A5001BB0A8 /* Tiledesk.strings */; };
+		B2FFB10322C299A5001BB0A8 /* TiledeskAction.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0EF22C299A5001BB0A8 /* TiledeskAction.h */; };
+		B2FFB10422C299A5001BB0A8 /* TiledeskDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F022C299A5001BB0A8 /* TiledeskDepartment.m */; };
+		B2FFB10522C299A5001BB0A8 /* TiledeskStartVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F222C299A5001BB0A8 /* TiledeskStartVC.h */; };
+		B2FFB10622C299A5001BB0A8 /* TiledeskLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F322C299A5001BB0A8 /* TiledeskLocal.m */; };
+		B2FFB10722C299A5001BB0A8 /* TiledeskDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F422C299A5001BB0A8 /* TiledeskDataService.h */; };
+		B2FFB10822C299A5001BB0A8 /* TiledeskCategoryStepTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F522C299A5001BB0A8 /* TiledeskCategoryStepTVC.h */; };
+		B2FFB10922C299A5001BB0A8 /* TiledeskFacade.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F722C299A5001BB0A8 /* TiledeskFacade.h */; };
+		B2FFB10A22C299A5001BB0A8 /* TiledeskAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0F822C299A5001BB0A8 /* TiledeskAction.m */; };
+		B2FFB10B22C299A5001BB0A8 /* TiledeskDescriptionStepTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0F922C299A5001BB0A8 /* TiledeskDescriptionStepTVC.h */; };
+		B2FFB10C22C299A5001BB0A8 /* TiledeskDepartment.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0FA22C299A5001BB0A8 /* TiledeskDepartment.h */; };
+		B2FFB10D22C299A5001BB0A8 /* TiledeskLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FFB0FB22C299A5001BB0A8 /* TiledeskLocal.h */; };
+		B2FFB10E22C299A5001BB0A8 /* TiledeskDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FC22C299A5001BB0A8 /* TiledeskDataService.m */; };
+		B2FFB10F22C299A5001BB0A8 /* TiledeskStartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FD22C299A5001BB0A8 /* TiledeskStartVC.m */; };
+		B2FFB11022C299A5001BB0A8 /* TiledeskFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FE22C299A5001BB0A8 /* TiledeskFacade.m */; };
+		B2FFB11122C299A5001BB0A8 /* TiledeskCategoryStepTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFB0FF22C299A5001BB0A8 /* TiledeskCategoryStepTVC.m */; };
 		B2FFB11222C299A5001BB0A8 /* Help_request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FFB10022C299A5001BB0A8 /* Help_request.storyboard */; };
+		B2FFB1B122C68010001BB0A8 /* TiledeskService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2FFB1B022C68010001BB0A8 /* TiledeskService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,26 +52,27 @@
 		B275AB3A22C294B800E2D388 /* TiledeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiledeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275AB3F22C294B800E2D388 /* TiledeskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledeskTests.swift; sourceTree = "<group>"; };
 		B275AB4122C294B800E2D388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2FFB0EC22C299A5001BB0A8 /* HelpDescriptionStepTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDescriptionStepTVC.m; sourceTree = "<group>"; };
-		B2FFB0EE22C299A5001BB0A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Help.strings; sourceTree = "<group>"; };
-		B2FFB0EF22C299A5001BB0A8 /* HelpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpAction.h; sourceTree = "<group>"; };
-		B2FFB0F022C299A5001BB0A8 /* HelpDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDepartment.m; sourceTree = "<group>"; };
-		B2FFB0F122C299A5001BB0A8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Help.strings; sourceTree = "<group>"; };
-		B2FFB0F222C299A5001BB0A8 /* HelpStartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpStartVC.h; sourceTree = "<group>"; };
-		B2FFB0F322C299A5001BB0A8 /* HelpLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpLocal.m; sourceTree = "<group>"; };
-		B2FFB0F422C299A5001BB0A8 /* HelpDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDataService.h; sourceTree = "<group>"; };
-		B2FFB0F522C299A5001BB0A8 /* HelpCategoryStepTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCategoryStepTVC.h; sourceTree = "<group>"; };
-		B2FFB0F622C299A5001BB0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Help.strings; sourceTree = "<group>"; };
-		B2FFB0F722C299A5001BB0A8 /* HelpFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpFacade.h; sourceTree = "<group>"; };
-		B2FFB0F822C299A5001BB0A8 /* HelpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpAction.m; sourceTree = "<group>"; };
-		B2FFB0F922C299A5001BB0A8 /* HelpDescriptionStepTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDescriptionStepTVC.h; sourceTree = "<group>"; };
-		B2FFB0FA22C299A5001BB0A8 /* HelpDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDepartment.h; sourceTree = "<group>"; };
-		B2FFB0FB22C299A5001BB0A8 /* HelpLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpLocal.h; sourceTree = "<group>"; };
-		B2FFB0FC22C299A5001BB0A8 /* HelpDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDataService.m; sourceTree = "<group>"; };
-		B2FFB0FD22C299A5001BB0A8 /* HelpStartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpStartVC.m; sourceTree = "<group>"; };
-		B2FFB0FE22C299A5001BB0A8 /* HelpFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpFacade.m; sourceTree = "<group>"; };
-		B2FFB0FF22C299A5001BB0A8 /* HelpCategoryStepTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCategoryStepTVC.m; sourceTree = "<group>"; };
+		B2FFB0EC22C299A5001BB0A8 /* TiledeskDescriptionStepTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskDescriptionStepTVC.m; sourceTree = "<group>"; };
+		B2FFB0EE22C299A5001BB0A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tiledesk.strings; sourceTree = "<group>"; };
+		B2FFB0EF22C299A5001BB0A8 /* TiledeskAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskAction.h; sourceTree = "<group>"; };
+		B2FFB0F022C299A5001BB0A8 /* TiledeskDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskDepartment.m; sourceTree = "<group>"; };
+		B2FFB0F122C299A5001BB0A8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Tiledesk.strings; sourceTree = "<group>"; };
+		B2FFB0F222C299A5001BB0A8 /* TiledeskStartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskStartVC.h; sourceTree = "<group>"; };
+		B2FFB0F322C299A5001BB0A8 /* TiledeskLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskLocal.m; sourceTree = "<group>"; };
+		B2FFB0F422C299A5001BB0A8 /* TiledeskDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskDataService.h; sourceTree = "<group>"; };
+		B2FFB0F522C299A5001BB0A8 /* TiledeskCategoryStepTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskCategoryStepTVC.h; sourceTree = "<group>"; };
+		B2FFB0F622C299A5001BB0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Tiledesk.strings; sourceTree = "<group>"; };
+		B2FFB0F722C299A5001BB0A8 /* TiledeskFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskFacade.h; sourceTree = "<group>"; };
+		B2FFB0F822C299A5001BB0A8 /* TiledeskAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskAction.m; sourceTree = "<group>"; };
+		B2FFB0F922C299A5001BB0A8 /* TiledeskDescriptionStepTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskDescriptionStepTVC.h; sourceTree = "<group>"; };
+		B2FFB0FA22C299A5001BB0A8 /* TiledeskDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskDepartment.h; sourceTree = "<group>"; };
+		B2FFB0FB22C299A5001BB0A8 /* TiledeskLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledeskLocal.h; sourceTree = "<group>"; };
+		B2FFB0FC22C299A5001BB0A8 /* TiledeskDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskDataService.m; sourceTree = "<group>"; };
+		B2FFB0FD22C299A5001BB0A8 /* TiledeskStartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskStartVC.m; sourceTree = "<group>"; };
+		B2FFB0FE22C299A5001BB0A8 /* TiledeskFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskFacade.m; sourceTree = "<group>"; };
+		B2FFB0FF22C299A5001BB0A8 /* TiledeskCategoryStepTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledeskCategoryStepTVC.m; sourceTree = "<group>"; };
 		B2FFB10022C299A5001BB0A8 /* Help_request.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help_request.storyboard; sourceTree = "<group>"; };
+		B2FFB1B022C68010001BB0A8 /* TiledeskService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TiledeskService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,22 +147,22 @@
 		B2FFB0EB22C299A5001BB0A8 /* TildeskWidget */ = {
 			isa = PBXGroup;
 			children = (
-				B2FFB0EC22C299A5001BB0A8 /* HelpDescriptionStepTVC.m */,
-				B2FFB0EF22C299A5001BB0A8 /* HelpAction.h */,
-				B2FFB0F022C299A5001BB0A8 /* HelpDepartment.m */,
-				B2FFB0F222C299A5001BB0A8 /* HelpStartVC.h */,
-				B2FFB0F322C299A5001BB0A8 /* HelpLocal.m */,
-				B2FFB0F422C299A5001BB0A8 /* HelpDataService.h */,
-				B2FFB0F522C299A5001BB0A8 /* HelpCategoryStepTVC.h */,
-				B2FFB0F722C299A5001BB0A8 /* HelpFacade.h */,
-				B2FFB0F822C299A5001BB0A8 /* HelpAction.m */,
-				B2FFB0F922C299A5001BB0A8 /* HelpDescriptionStepTVC.h */,
-				B2FFB0FA22C299A5001BB0A8 /* HelpDepartment.h */,
-				B2FFB0FB22C299A5001BB0A8 /* HelpLocal.h */,
-				B2FFB0FC22C299A5001BB0A8 /* HelpDataService.m */,
-				B2FFB0FD22C299A5001BB0A8 /* HelpStartVC.m */,
-				B2FFB0FE22C299A5001BB0A8 /* HelpFacade.m */,
-				B2FFB0FF22C299A5001BB0A8 /* HelpCategoryStepTVC.m */,
+				B2FFB0EF22C299A5001BB0A8 /* TiledeskAction.h */,
+				B2FFB0F822C299A5001BB0A8 /* TiledeskAction.m */,
+				B2FFB0F522C299A5001BB0A8 /* TiledeskCategoryStepTVC.h */,
+				B2FFB0FF22C299A5001BB0A8 /* TiledeskCategoryStepTVC.m */,
+				B2FFB0F422C299A5001BB0A8 /* TiledeskDataService.h */,
+				B2FFB0FC22C299A5001BB0A8 /* TiledeskDataService.m */,
+				B2FFB0FA22C299A5001BB0A8 /* TiledeskDepartment.h */,
+				B2FFB0F022C299A5001BB0A8 /* TiledeskDepartment.m */,
+				B2FFB0F922C299A5001BB0A8 /* TiledeskDescriptionStepTVC.h */,
+				B2FFB0EC22C299A5001BB0A8 /* TiledeskDescriptionStepTVC.m */,
+				B2FFB0F722C299A5001BB0A8 /* TiledeskFacade.h */,
+				B2FFB0FE22C299A5001BB0A8 /* TiledeskFacade.m */,
+				B2FFB0FB22C299A5001BB0A8 /* TiledeskLocal.h */,
+				B2FFB0F322C299A5001BB0A8 /* TiledeskLocal.m */,
+				B2FFB0F222C299A5001BB0A8 /* TiledeskStartVC.h */,
+				B2FFB0FD22C299A5001BB0A8 /* TiledeskStartVC.m */,
 			);
 			path = TildeskWidget;
 			sourceTree = "<group>";
@@ -168,8 +170,9 @@
 		B2FFB11322C353BB001BB0A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B2FFB1B022C68010001BB0A8 /* TiledeskService-Info.plist */,
 				B2FFB10022C299A5001BB0A8 /* Help_request.storyboard */,
-				B2FFB0ED22C299A5001BB0A8 /* Help.strings */,
+				B2FFB0ED22C299A5001BB0A8 /* Tiledesk.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,14 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B275AB4222C294B800E2D388 /* Tiledesk.h in Headers */,
-				B2FFB10D22C299A5001BB0A8 /* HelpLocal.h in Headers */,
-				B2FFB10322C299A5001BB0A8 /* HelpAction.h in Headers */,
-				B2FFB10822C299A5001BB0A8 /* HelpCategoryStepTVC.h in Headers */,
-				B2FFB10C22C299A5001BB0A8 /* HelpDepartment.h in Headers */,
-				B2FFB10B22C299A5001BB0A8 /* HelpDescriptionStepTVC.h in Headers */,
-				B2FFB10522C299A5001BB0A8 /* HelpStartVC.h in Headers */,
-				B2FFB10722C299A5001BB0A8 /* HelpDataService.h in Headers */,
-				B2FFB10922C299A5001BB0A8 /* HelpFacade.h in Headers */,
+				B2FFB10D22C299A5001BB0A8 /* TiledeskLocal.h in Headers */,
+				B2FFB10322C299A5001BB0A8 /* TiledeskAction.h in Headers */,
+				B2FFB10822C299A5001BB0A8 /* TiledeskCategoryStepTVC.h in Headers */,
+				B2FFB10C22C299A5001BB0A8 /* TiledeskDepartment.h in Headers */,
+				B2FFB10B22C299A5001BB0A8 /* TiledeskDescriptionStepTVC.h in Headers */,
+				B2FFB10522C299A5001BB0A8 /* TiledeskStartVC.h in Headers */,
+				B2FFB10722C299A5001BB0A8 /* TiledeskDataService.h in Headers */,
+				B2FFB10922C299A5001BB0A8 /* TiledeskFacade.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2FFB10222C299A5001BB0A8 /* Help.strings in Resources */,
+				B2FFB10222C299A5001BB0A8 /* Tiledesk.strings in Resources */,
+				B2FFB1B122C68010001BB0A8 /* TiledeskService-Info.plist in Resources */,
 				B2FFB11222C299A5001BB0A8 /* Help_request.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,14 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2FFB11122C299A5001BB0A8 /* HelpCategoryStepTVC.m in Sources */,
-				B2FFB10422C299A5001BB0A8 /* HelpDepartment.m in Sources */,
-				B2FFB10622C299A5001BB0A8 /* HelpLocal.m in Sources */,
-				B2FFB11022C299A5001BB0A8 /* HelpFacade.m in Sources */,
-				B2FFB10F22C299A5001BB0A8 /* HelpStartVC.m in Sources */,
-				B2FFB10E22C299A5001BB0A8 /* HelpDataService.m in Sources */,
-				B2FFB10A22C299A5001BB0A8 /* HelpAction.m in Sources */,
-				B2FFB10122C299A5001BB0A8 /* HelpDescriptionStepTVC.m in Sources */,
+				B2FFB11122C299A5001BB0A8 /* TiledeskCategoryStepTVC.m in Sources */,
+				B2FFB10422C299A5001BB0A8 /* TiledeskDepartment.m in Sources */,
+				B2FFB10622C299A5001BB0A8 /* TiledeskLocal.m in Sources */,
+				B2FFB11022C299A5001BB0A8 /* TiledeskFacade.m in Sources */,
+				B2FFB10F22C299A5001BB0A8 /* TiledeskStartVC.m in Sources */,
+				B2FFB10E22C299A5001BB0A8 /* TiledeskDataService.m in Sources */,
+				B2FFB10A22C299A5001BB0A8 /* TiledeskAction.m in Sources */,
+				B2FFB10122C299A5001BB0A8 /* TiledeskDescriptionStepTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,14 +380,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2FFB0ED22C299A5001BB0A8 /* Help.strings */ = {
+		B2FFB0ED22C299A5001BB0A8 /* Tiledesk.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B2FFB0EE22C299A5001BB0A8 /* en */,
 				B2FFB0F122C299A5001BB0A8 /* it */,
 				B2FFB0F622C299A5001BB0A8 /* Base */,
 			);
-			name = Help.strings;
+			name = Tiledesk.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
