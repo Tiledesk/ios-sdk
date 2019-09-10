@@ -6,8 +6,28 @@
 	<dict>
 		<key>Tiledesk.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>29</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B225C5B52327A5AE00C841BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B275AB3022C294B800E2D388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B275AB3922C294B800E2D388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

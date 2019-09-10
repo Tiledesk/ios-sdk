@@ -133,7 +133,8 @@ static NSInteger FIRST_STEP_CELL_HEIGHT = 60;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     TiledeskDepartment *selectedDepartment = [self.departments objectAtIndex:indexPath.row];
     self.helpAction.department = selectedDepartment;
-    [self performSegueWithIdentifier:@"next" sender:self];
+//    [self performSegueWithIdentifier:@"next" sender:self];
+    [self.helpAction dismissWizardAndOpenMessageViewWithSupport];
 }
 
 #pragma mark - Navigation

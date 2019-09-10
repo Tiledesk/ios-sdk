@@ -12,7 +12,8 @@
 
 @interface TiledeskDataService : NSObject
 
-+ (NSString *)departmentsService;
-- (void)downloadDepartmentsWithCompletionHandler:(void(^)(NSArray<TiledeskDepartment *> *departments, NSError *error))callback;
++ (NSString *)widgetsService;
+- (void)downloadWidgetDataWithCompletionHandler:(void(^)(NSData *data, NSError *error))callback;
++ (NSArray<TiledeskDepartment *> *)JSON2Departments:(NSData *)jsonData;
 
 @end

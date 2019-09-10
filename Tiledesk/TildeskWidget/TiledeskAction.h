@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @class TiledeskDepartment;
+@class ChatUser;
 
 @interface TiledeskAction : NSObject
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) NSString *message;
 @property (strong, nonatomic) NSDictionary *attributes;
 
+-(void)connectAnonymousWithCompletion:(void (^)(ChatUser *user, NSError *error))callback;
 -(void)dismissWizardAndOpenMessageViewWithSupport;
 
 @end

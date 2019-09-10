@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>base-url</key>
-	<string>https://api.tiledesk.com/v1/</string>
-	<key>departments-service</key>
-	<string>/%@/departments</string>
+	<string>https://api.tiledesk.com/v1</string>
+	<key>widgets-service</key>
+	<string>%@/widgets</string>
 </dict>
 </plist>

@@ -9,6 +9,7 @@
 #import "TiledeskAction.h"
 #import "TiledeskStartVC.h"
 #import "ChatUser.h"
+#import "ChatGroup.h"
 #import "ChatAuth.h"
 #import "ChatManager.h"
 #import "ChatUIManager.h"
@@ -17,26 +18,29 @@
 
 @implementation TiledeskAction
 
--(void)connectWithCompletion:(void (^)(ChatUser *user, NSError *error))callback {
-    [FIRApp configure];
-    [ChatManager configure];
-    
-    NSString *email = @"YOUR-EMAIL";
-    NSString *password = @"YOUR-PASSWORD";
-    [ChatAuth authWithEmail:email password:password completion:^(ChatUser *user, NSError *error) {
-        if (error) {
-            NSLog(@"Authentication error. %@", error);
-            callback(nil, error);
-        }
-        else {
-            ChatManager *chatm = [ChatManager getInstance];
-            user.firstname = @"YOUR FIRST NAME";
-            user.lastname = @"YOUR LAST NAME";
-            [chatm startWithUser:user];
-            callback(user, nil);
-        }
-    }];
+-(void)connectAnonymousWithCompletion:(void (^)(ChatUser *user, NSError *error))callback {
+    if ([FIRApp defaultApp] == nil) {
+        [FIRApp configure];
+    }
+    if ([ChatManager getInstance].tenant == nil) {
+        [ChatManager configure];
+        [ChatAuth authAnonymousWithCompletion:^(ChatUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"Authentication error. %@", error);
+                callback(nil, error);
+            }
+            else {
+                ChatManager *chatm = [ChatManager getInstance];
+                NSLog(@"Firebase Anonymous Auth. userid: %@", user.userId);
+                user.firstname = @"Andrea Mobile Tester";
+                user.lastname = @"";
+                [chatm startWithUser:user];
+                callback(user, nil);
+            }
+        }];
+    }
 }
+
 -(void)openSupportView:(UIViewController *)sourcevc {
 //    self.context = [[NSMutableDictionary alloc] init];
     self.sourcevc = sourcevc;
@@ -72,10 +76,19 @@
     // attributes setObject iPhone (vedi devices)
     
     [self.sourcevc dismissViewControllerAnimated:YES completion:^{
-        ChatUser *recipient = [[ChatUser alloc] init:support_group_id fullname:@"Support"];
-        [[ChatUIManager getInstance] openConversationMessagesViewAsModalWith:(ChatUser *)recipient  viewController:self.sourcevc attributes:self.attributes withCompletionBlock:^{
+        ChatGroup *support_group = [[ChatGroup alloc] initWithGroupId:support_group_id name:@"Andrea Mobile Test"];
+        
+        ChatManager *chatm = [ChatManager getInstance];
+        NSMutableDictionary *members = [[NSMutableDictionary alloc] init];
+        [members setObject:@(true) forKey:chatm.loggedUser.userId];
+        support_group.members = members;
+        [[ChatUIManager getInstance] openConversationMessagesViewAsModalWithGroup:support_group  viewController:self.sourcevc attributes:self.attributes withCompletionBlock:^{
             NSLog(@"Messages view dismissed.");
         }];
+//        ChatUser *user = [[ChatUser alloc] init:support_group_id fullname:@"Andrea Mobile Test"];
+//        [[ChatUIManager getInstance] openConversationMessagesViewAsModalWithUser:user  viewController:self.sourcevc attributes:self.attributes withCompletionBlock:^{
+//                NSLog(@"Messages view dismissed.");
+//        }];
     }];
     
 }

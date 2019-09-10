@@ -44,11 +44,14 @@
 
 /* Begin PBXFileReference section */
 		4DF149614CFF688BAB510F63 /* Pods-Tiledesk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiledesk.debug.xcconfig"; path = "Target Support Files/Pods-Tiledesk/Pods-Tiledesk.debug.xcconfig"; sourceTree = "<group>"; };
+		687C49E2BA10BEAEC9A47319 /* Pods-TiledeskSDKPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiledeskSDKPlayground.release.xcconfig"; path = "Target Support Files/Pods-TiledeskSDKPlayground/Pods-TiledeskSDKPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		799821D7382D67D983B1BC37 /* Pods-TiledeskSDKPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiledeskSDKPlayground.debug.xcconfig"; path = "Target Support Files/Pods-TiledeskSDKPlayground/Pods-TiledeskSDKPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		82700B500692F00888E014E0 /* Pods-Tiledesk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiledesk.release.xcconfig"; path = "Target Support Files/Pods-Tiledesk/Pods-Tiledesk.release.xcconfig"; sourceTree = "<group>"; };
 		886638F6CB0CFAB4950D6524 /* Pods_Tiledesk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiledesk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920C9A6F235C666E190531E0 /* Pods_TiledeskSDKPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiledeskSDKPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B225C5B02327A51F00C841BE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B275AB3122C294B800E2D388 /* Tiledesk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tiledesk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275AB3422C294B800E2D388 /* Tiledesk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tiledesk.h; sourceTree = "<group>"; };
-		B275AB3522C294B800E2D388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B275AB3A22C294B800E2D388 /* TiledeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiledeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B275AB3F22C294B800E2D388 /* TiledeskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledeskTests.swift; sourceTree = "<group>"; };
 		B275AB4122C294B800E2D388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				4DF149614CFF688BAB510F63 /* Pods-Tiledesk.debug.xcconfig */,
 				82700B500692F00888E014E0 /* Pods-Tiledesk.release.xcconfig */,
+				799821D7382D67D983B1BC37 /* Pods-TiledeskSDKPlayground.debug.xcconfig */,
+				687C49E2BA10BEAEC9A47319 /* Pods-TiledeskSDKPlayground.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -128,9 +133,9 @@
 		B275AB3322C294B800E2D388 /* Tiledesk */ = {
 			isa = PBXGroup;
 			children = (
+				B225C5B02327A51F00C841BE /* Info.plist */,
 				B275AB3422C294B800E2D388 /* Tiledesk.h */,
 				B2FFB0EB22C299A5001BB0A8 /* TildeskWidget */,
-				B275AB3522C294B800E2D388 /* Info.plist */,
 			);
 			path = Tiledesk;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				886638F6CB0CFAB4950D6524 /* Pods_Tiledesk.framework */,
+				920C9A6F235C666E190531E0 /* Pods_TiledeskSDKPlayground.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,8 +257,8 @@
 		B275AB2822C294B800E2D388 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Frontiere21 SRL";
 				TargetAttributes = {
 					B275AB3022C294B800E2D388 = {
@@ -397,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -461,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

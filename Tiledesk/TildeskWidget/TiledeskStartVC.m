@@ -33,31 +33,37 @@
     [super viewDidAppear:animated];
     [self.activityIndicator startAnimating];
     TiledeskDataService *service =[[TiledeskDataService alloc] init];
-    [service downloadDepartmentsWithCompletionHandler:^(NSArray<TiledeskDepartment *> *departments, NSError *error) {
+    [service downloadWidgetDataWithCompletionHandler:^(NSData *data, NSError *error) {
         // TODO
-        NSLog(@"count deps: %lu", (unsigned long)departments.count);
-        for (TiledeskDepartment *dep in departments) {
-            NSLog(@"dep id: %@, name: %@ isDefault: %d", dep.departmentId, dep.name, dep.isDefault);
-        }
-        if (departments.count == 1) {
-            // set context.department = default
-            self.helpAction.department = departments[0];
-            // perform message-segue
-            [self performSegueWithIdentifier:@"message-segue" sender:self];
-        }
-        else if (departments.count > 1) {
-            NSMutableArray<TiledeskDepartment *> *mutableDeps = [departments mutableCopy];
-            for (int i = 0; i < mutableDeps.count; i++) {
-                TiledeskDepartment *dep = mutableDeps[i];
-                if (dep.isDefault) {
-                    [mutableDeps removeObjectAtIndex:i];
-                }
+        NSArray<TiledeskDepartment *> *departments = [TiledeskDataService JSON2Departments: data];
+        if (departments) {
+            NSLog(@"count deps: %lu", (unsigned long)departments.count);
+            for (TiledeskDepartment *dep in departments) {
+                NSLog(@"dep id: %@, name: %@ isDefault: %d", dep.departmentId, dep.name, dep.isDefault);
             }
-            self.departments = mutableDeps;
-            [self performSegueWithIdentifier:@"departments-segue" sender:self];
+            if (departments.count == 1) {
+                // set context.department = default
+                self.helpAction.department = departments[0];
+                // perform message-segue
+                [self performSegueWithIdentifier:@"message-segue" sender:self];
+            }
+            else if (departments.count > 1) {
+                NSMutableArray<TiledeskDepartment *> *mutableDeps = [departments mutableCopy];
+                for (int i = 0; i < mutableDeps.count; i++) {
+                    TiledeskDepartment *dep = mutableDeps[i];
+                    if (dep.isDefault) {
+                        [mutableDeps removeObjectAtIndex:i];
+                    }
+                }
+                self.departments = mutableDeps;
+                [self performSegueWithIdentifier:@"departments-segue" sender:self];
+            }
+            else {
+                // error, deps.couont can't be 0
+            }
         }
         else {
-            // error, deps.couont can't be 0
+            NSLog(@"departmennts error.");
         }
     }];
 }
